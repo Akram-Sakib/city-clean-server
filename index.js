@@ -8,9 +8,9 @@ const { json } = require("express");
 const port = process.env.PORT || 5000;
 require("dotenv").config();
 
-// cleaning-services-project-firebase-adminsdk.json;
+// city-clean-firebase-adminsdk.json;
 
-// const serviceAccount = require("./cleaning-services-project-firebase-adminsdk.json");
+// const serviceAccount = require("./city-clean-firebase-adminsdk.json");
 
 // admin.initializeApp({
 //   credential: admin.credential.cert(serviceAccount),
@@ -50,7 +50,6 @@ async function run() {
     const testimonialCollection = database.collection("testimonials");
     const userCollection = database.collection("users");
     console.log("connected");
-    
 
     // service
     // get services

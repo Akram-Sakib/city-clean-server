@@ -10,11 +10,11 @@ require("dotenv").config();
 
 // city-clean-firebase-adminsdk.json;
 
-// const serviceAccount = require("./city-clean-firebase-adminsdk.json");
+const serviceAccount = require("./google-credentials.json");
 
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-// });
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
 admin.initializeApp({
   credential: admin.credential.applicationDefault(),
 });

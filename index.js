@@ -15,9 +15,9 @@ const serviceAccount = require("./google-credentials.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
-admin.initializeApp({
-  credential: admin.credential.applicationDefault(),
-});
+// admin.initializeApp({
+//   credential: admin.credential.applicationDefault(),
+// });
 
 app.use(cors());
 app.use(express.json());

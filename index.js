@@ -10,14 +10,11 @@ require("dotenv").config();
 
 // city-clean-firebase-adminsdk.json;
 
-const serviceAccount = require("./google-credentials.json");
-
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+console.log(serviceAccount);
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
-// admin.initializeApp({
-//   credential: admin.credential.applicationDefault(),
-// });
 
 app.use(cors());
 app.use(express.json());
